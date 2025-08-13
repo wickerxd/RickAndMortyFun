@@ -1,7 +1,7 @@
 <template>
   <Suspense>
-    <div>
-      <header class="container">
+    <div class="container">
+      <header>
         <h1>Rick and morty something</h1>
 
         <p>
@@ -14,9 +14,9 @@
       </header>
 
       <nav class="menu-items">
-        <router-link to="characters">Characters</router-link>
-        <router-link to="locations">Locations</router-link>
-        <router-link to="episodes">Episodes</router-link>
+        <router-link to="/characters">Characters</router-link>
+        <router-link to="/locations">Locations</router-link>
+        <router-link to="/episodes">Episodes</router-link>
       </nav>
 
       <RouterView />
@@ -37,8 +37,7 @@ import { RouterLink, RouterView } from "vue-router";
 
 .container {
   width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
+
   margin-left: auto;
   margin-right: auto;
 }
@@ -46,36 +45,21 @@ import { RouterLink, RouterView } from "vue-router";
 @media (min-width: 640px) {
   .container {
     max-width: 640px;
-    padding-left: 2rem;
-    padding-right: 2rem;
   }
 }
 @media (min-width: 768px) {
   .container {
     max-width: 768px;
-    padding-left: 2rem;
-    padding-right: 2rem;
   }
 }
 @media (min-width: 1024px) {
   .container {
     max-width: 1024px;
-    padding-left: 3rem;
-    padding-right: 3rem;
   }
 }
 @media (min-width: 1280px) {
   .container {
     max-width: 1280px;
-    padding-left: 108px;
-    padding-right: 108px;
-  }
-}
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-    padding-left: 64px;
-    padding-right: 64px;
   }
 }
 </style>
